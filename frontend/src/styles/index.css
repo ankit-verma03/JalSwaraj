@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:focus-visible {
+    outline: 3px solid #1ca3c7;
+    outline-offset: 2px;
+}
+
+body {
+    @apply bg-slate-50 text-slate-800 antialiased;
+    overflow-x: hidden;
+}
+
+.wave-track {
+    width: 200%;
+    animation: wave 14s linear infinite;
+}
+
+@keyframes wave {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .wave-track {
+        animation: none;
+    }
+
+    * {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}

@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env
+
+# Keep the example, ignore the real one
+backend/.env
+!backend/.env.example
+
+# SQLite databases
+*.db
+*.sqlite3
+
+# Node
+node_modules/
+dist/
+.pnp
+.pnp.js
+
+# Vite / build output
+frontend/dist/
+/dist/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Alembic (keep the folder, ignore auto-generated)
+backend/alembic/versions/*.pyc

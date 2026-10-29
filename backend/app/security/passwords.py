@@ -1,0 +1,17 @@
+# Password hashing and verification
+
+from argon2 import PasswordHasher
+from argon2.exceptions import VerifyMismatchError, InvalidHashError
+
+_ph = PasswordHasher()  # Argon2id by default
+
+
+def hash_password(password: str) -> str:
+    return _ph.hash(password)
+
+
+def verify_password(password: str, hashed: str) -> bool:
+    try:
+        return _ph.verify(hashed, password)
+    except (VerifyMismatchError, InvalidHashError):
+        return False
