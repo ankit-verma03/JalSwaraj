@@ -55,3 +55,4 @@ htmlcov/
 
 # Alembic (keep the folder, ignore auto-generated)
 backend/alembic/versions/*.pyc
+
